@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌙 Thème Tazkira */
+:root {
+  --color-bg: #0f172a; /* Bleu nuit profond */
+  --color-accent: #facc15; /* Doré doux */
+  --color-text: #f8fafc; /* Blanc cassé */
+  --color-card: #1e293b; /* Bleu plus clair */
+}
+
+body {
+  @apply bg-[var(--color-bg)] text-[var(--color-text)] min-h-screen flex flex-col items-center justify-center text-center font-sans;
+}
+
+button {
+  @apply bg-[var(--color-accent)] text-black font-semibold px-6 py-3 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl;
+}
+
+h1 {
+  @apply text-4xl font-bold mb-4;
+}
+
+p {
+  @apply text-lg mb-8 text-gray-300;
+}
+
+/* 🌟 Carte ou bloc central */
+.card {
+  @apply bg-[var(--color-card)] p-10 rounded-3xl shadow-xl max-w-md mx-auto;
+}

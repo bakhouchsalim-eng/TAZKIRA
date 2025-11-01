@@ -1,0 +1,371 @@
+/* ==========================
+   🌿 Thème Tazkira – Vert pastel clair
+========================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e6f8ec !important; /* vert pastel clair */
+  color: #111;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================
+   🧭 NAVBAR
+========================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #95d5b2; /* vert clair */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  font-size: 1.3rem;
+  color: #1b4332;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1b4332;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #081c15;
+}
+
+/* ==========================
+   🏠 PAGE D'ACCUEIL CENTRÉE
+========================== */
+
+.main-content {
+  flex: 1;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* ✅ prend toute la hauteur disponible (moins la navbar/footer) */
+  min-height: calc(100vh - 160px);
+
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.home-container .title {
+  font-size: 2.4rem;
+  color: #1b4332;
+  margin-bottom: 15px;
+}
+
+.home-container .subtitle {
+  color: #2d6a4f;
+  font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.home-container button {
+  margin-top: 25px;
+  background-color: #40916c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.home-container button:hover {
+  background-color: #2d6a4f;
+  transform: scale(1.03);
+}
+
+/* ==========================
+   🕊️ CARTES / BLOCS
+========================== */
+
+.card {
+  background: #f3fcf6;
+  border-radius: 16px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+  color: #1b4332;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+/* ==========================
+   💬 ASSISTANT IA / INPUTS
+========================== */
+
+.quran-verse {
+  text-align: center;
+  direction: rtl;
+  font-size: 1.8rem;
+  margin: 15px 0;
+  color: #000;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #b7e4c7;
+  font-size: 1rem;
+  background-color: #f9fff9;
+  color: #111;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #74c69d;
+}
+
+button {
+  background-color: #40916c;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #2d6a4f;
+}
+
+.ia-answer {
+  background: #f9fff9;
+  color: #222;
+  border-left: 4px solid #74c69d;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* ==========================
+   📱 FOOTER
+========================== */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #2d6a4f;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #d8f3dc;
+}
+
+/* ==========================
+   📱 RESPONSIVE MOBILE
+========================== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .home-container .title {
+    font-size: 1.9rem;
+  }
+
+  .home-container .subtitle {
+    font-size: 1rem;
+  }
+}
+/* ======== NAVBAR RESPONSIVE & ANIMEE ======== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d8f3dc;
+  padding: 12px 20px;
+  position: relative;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1b4332;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a {
+  color: #1b4332;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2d6a4f;
+}
+
+/* --- Sous-menu --- */
+.submenu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.submenu a {
+  display: block;
+  padding: 8px 10px;
+  color: #1b4332;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.submenu a:hover {
+  background-color: #d8f3dc;
+}
+
+/* --- Animation du sous-menu --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === BOUTON HAMBURGER === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #1b4332;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Animation du hamburger (croix) */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* --- MENU MOBILE --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #f1faee;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    color: #1b4332;
+  }
+}
+
+/* Animation d’ouverture du menu mobile */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
